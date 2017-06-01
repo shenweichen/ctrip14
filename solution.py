@@ -49,7 +49,7 @@ def main():
 
     # 执行预测
     print('predicting start')
-    out = pd.read_csv('../data/prediction_lilei_20170320.txt')
+    out = pd.read_csv(data_path +'prediction_lilei_20170320.txt')
     test_x = get_x(out[['product_id', 'product_month']], product_info)
     ans = [clf.predict(test_x) for clf in clfs]
     # 23个月均无数据的product_id
